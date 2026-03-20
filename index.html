@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Tschingler</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="icon.png">
+    <meta name="theme-color" content="#333333">
+</head>
+<body>
+    <header>
+        <h1>Tschingler</h1>
+        <div>
+            <button id="reset-btn" aria-label="Reset App Data" title="Reset to defaults (clears all data)">🗑️</button>
+            <button id="download-btn" aria-label="Download All for Offline" title="Download all sounds for offline use">⬇️</button>
+            <button id="add-btn" aria-label="Add Jingle">+</button>
+        </div>
+    </header>
+
+    <main id="jingle-grid">
+        <!-- Jingles will be injected here -->
+    </main>
+
+    <dialog id="add-dialog">
+        <form method="dialog">
+            <h2>Add New Jingle</h2>
+            <label for="jingle-name">Name</label>
+            <input type="text" id="jingle-name" required placeholder="e.g. Sad Trombone">
+            
+            <label for="jingle-url">Audio URL</label>
+            <input type="url" id="jingle-url" required placeholder="https://example.com/sound.mp3">
+            
+            <div class="dialog-actions">
+                <button value="cancel" formnovalidate>Cancel</button>
+                <button id="save-btn" value="default">Save</button>
+            </div>
+        </form>
+    </dialog>
+
+    <script src="app.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js')
+                .then(reg => console.log('Service Worker Registered', reg))
+                .catch(err => console.log('Service Worker Error', err));
+        }
+    </script>
+</body>
+</html>
