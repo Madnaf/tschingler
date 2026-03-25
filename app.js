@@ -3,7 +3,8 @@ const defaultJingles = [
     { name: "You Dreamer", url: "https://www.myinstants.com/media/sounds/you-dreamer.mp3", id: "1" },
     { name: "Cicada", url: "https://www.myinstants.com/media/sounds/grillen-zirpen.mp3", id: "2" },
     { name: "Works on my machine", url: "https://www.myinstants.com/media/sounds/works-on-my-machine.mp3", id: "3" }, // Placeholder, likely need real URL
-    { name: "Computer says no", url: "https://www.myinstants.com/media/sounds/computer-says-no.mp3", id: "4" }
+    { name: "Computer says no", url: "https://www.myinstants.com/media/sounds/computer-says-no.mp3", id: "4" },
+    { name: "Gugus", url: "https://www.myinstants.com/media/sounds/gugus-gsi-gugus-gebliebe-online-audio-converter.mp3", id: "4" }
 ];
 
 // State
